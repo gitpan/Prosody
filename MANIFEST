@@ -1,0 +1,16 @@
+Changes
+LICENSE
+MANIFEST
+META.json
+META.yml
+Makefile.PL
+README
+dist.ini
+lib/Prosody.pm
+lib/Prosody/Storage/SQL.pm
+lib/Prosody/Storage/SQL/DB.pm
+lib/Prosody/Storage/SQL/DB/Result/Prosody.pm
+t/00-load.t
+t/01-sampledb.t
+t/data/prosody.sqlite
+t/release-pod-syntax.t
