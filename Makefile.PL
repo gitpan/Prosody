@@ -28,7 +28,7 @@ my %WriteMakefileArgs = (
     'JSON' => '2.53',
     'Moose' => '2.0007'
   },
-  'VERSION' => '0.001',
+  'VERSION' => '0.002',
   'test' => {
     'TESTS' => 't/*.t'
   }

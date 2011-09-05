@@ -3,12 +3,12 @@ BEGIN {
   $Prosody::Storage::SQL::DB::Result::Prosody::AUTHORITY = 'cpan:GETTY';
 }
 BEGIN {
-  $Prosody::Storage::SQL::DB::Result::Prosody::VERSION = '0.001';
+  $Prosody::Storage::SQL::DB::Result::Prosody::VERSION = '0.002';
 }
 # ABSTRACT: Result class for the prosody table
 
-use Moose;
 use DBIx::Class::Candy;
+use Moose;
 
 table 'prosody';
 
@@ -53,7 +53,7 @@ Prosody::Storage::SQL::DB::Result::Prosody - Result class for the prosody table
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 AUTHOR
 
