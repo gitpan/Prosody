@@ -3,7 +3,7 @@ BEGIN {
   $Prosody::Storage::SQL::AUTHORITY = 'cpan:GETTY';
 }
 BEGIN {
-  $Prosody::Storage::SQL::VERSION = '0.002';
+  $Prosody::Storage::SQL::VERSION = '0.003';
 }
 # ABSTRACT: access a database of mod_storage_sql
 
@@ -11,6 +11,7 @@ use Moose;
 use Moose::Util::TypeConstraints;
 use Prosody::Storage::SQL::DB;
 use JSON;
+use Encode;
 
 has driver => (
 	is => 'ro',
@@ -132,7 +133,7 @@ sub get_value {
 	if ($row->type eq 'string') {
 		return $row->value;
 	} elsif ($row->type eq 'json') {
-		return decode_json($row->value);
+		return decode_json(encode('utf8', $row->value));
 	}
 }
 
@@ -146,7 +147,7 @@ Prosody::Storage::SQL - access a database of mod_storage_sql
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 AUTHOR
 

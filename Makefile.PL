@@ -25,10 +25,11 @@ my %WriteMakefileArgs = (
   'PREREQ_PM' => {
     'DBIx::Class' => '0.08192',
     'DBIx::Class::Candy' => '0.002000',
+    'Encode' => '2.44',
     'JSON' => '2.53',
     'Moose' => '2.0007'
   },
-  'VERSION' => '0.002',
+  'VERSION' => '0.003',
   'test' => {
     'TESTS' => 't/*.t'
   }
