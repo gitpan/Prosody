@@ -1,25 +1,17 @@
-package Prosody::Storage::SQL::DB;
-BEGIN {
-  $Prosody::Storage::SQL::DB::AUTHORITY = 'cpan:GETTY';
-}
-BEGIN {
-  $Prosody::Storage::SQL::DB::VERSION = '0.004';
-}
-# ABSTRACT: DBIx::Class::Schema for the prosody database
+#!/usr/bin/env perl
+# PODNAME: copy_prosody_db
+# ABSTRACT: Script for copying all entries of a source prosody database to a target prosody databaase
 
-use Moose;
-extends 'DBIx::Class::Schema';
+use App::CopyProsodyDB;
 
-__PACKAGE__->load_namespaces;
-
-1;
+App::CopyProsodyDB->new_with_options;
 
 __END__
 =pod
 
 =head1 NAME
 
-Prosody::Storage::SQL::DB - DBIx::Class::Schema for the prosody database
+copy_prosody_db - Script for copying all entries of a source prosody database to a target prosody databaase
 
 =head1 VERSION
 

@@ -3,7 +3,7 @@ BEGIN {
   $Prosody::Storage::SQL::AUTHORITY = 'cpan:GETTY';
 }
 BEGIN {
-  $Prosody::Storage::SQL::VERSION = '0.003';
+  $Prosody::Storage::SQL::VERSION = '0.004';
 }
 # ABSTRACT: access a database of mod_storage_sql
 
@@ -64,6 +64,9 @@ has _db => (
 	},
 );
 
+sub rs { shift->resultset(@_) }
+sub resultset { shift->_db->resultset('Prosody') }
+
 has dsn => (
 	is => 'ro',
 	lazy => 1,
@@ -79,7 +82,7 @@ has dsn => (
 
 sub host_list {
 	my ( $self ) = @_;	
-	my @hosts = $self->_db->resultset('Prosody')->search({},{
+	my @hosts = $self->rs->search({},{
 		columns => [ qw/host/ ],
 		distinct => 1,
     });
@@ -92,7 +95,7 @@ sub user_list {
 	my ( $self, $host ) = @_;
 	my %query;
 	$query{host} = $host if $host;
-	my @users = $self->_db->resultset('Prosody')->search(\%query,{
+	my @users = $self->rs->search(\%query,{
 		columns => [ qw/user/ ],
 		distinct => 1,
     });
@@ -105,7 +108,7 @@ sub all_user {
 	my ( $self, $host ) = @_;
 	my %query;
 	$query{host} = $host if $host;
-	my @keys = $self->_db->resultset('Prosody')->search(\%query);
+	my @keys = $self->rs->search(\%query);
 	my %v;
 	for (@keys) {
 		$v{$_->user.'@'.$_->host}->{$_->store}->{$_->key} = $self->get_value($_);
@@ -117,7 +120,7 @@ sub user {
 	my ( $self, $jid ) = @_;
 	my @jidparts = split(/@/,$jid);
 	die __PACKAGE__.': user parameter needs to be user@host' unless (@jidparts == 2);
-	my @keys = $self->_db->resultset('Prosody')->search({
+	my @keys = $self->rs->search({
 		host => $jidparts[1],
 		user => $jidparts[0],
 	});
@@ -147,7 +150,7 @@ Prosody::Storage::SQL - access a database of mod_storage_sql
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 AUTHOR
 

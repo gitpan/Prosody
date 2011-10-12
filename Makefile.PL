@@ -19,7 +19,9 @@ my %WriteMakefileArgs = (
     'ExtUtils::MakeMaker' => '6.30'
   },
   'DISTNAME' => 'Prosody',
-  'EXE_FILES' => [],
+  'EXE_FILES' => [
+    'bin/copy_prosody_db'
+  ],
   'LICENSE' => 'perl',
   'NAME' => 'Prosody',
   'PREREQ_PM' => {
@@ -27,9 +29,10 @@ my %WriteMakefileArgs = (
     'DBIx::Class::Candy' => '0.002000',
     'Encode' => '2.44',
     'JSON' => '2.53',
-    'Moose' => '2.0007'
+    'Moose' => '2.0007',
+    'MooseX::Getopt' => '0'
   },
-  'VERSION' => '0.003',
+  'VERSION' => '0.004',
   'test' => {
     'TESTS' => 't/*.t'
   }

@@ -5,7 +5,9 @@ META.json
 META.yml
 Makefile.PL
 README
+bin/copy_prosody_db
 dist.ini
+lib/App/CopyProsodyDB.pm
 lib/Prosody.pm
 lib/Prosody/Storage/SQL.pm
 lib/Prosody/Storage/SQL/DB.pm
