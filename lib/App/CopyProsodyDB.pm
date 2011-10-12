@@ -3,7 +3,7 @@ BEGIN {
   $App::CopyProsodyDB::AUTHORITY = 'cpan:GETTY';
 }
 BEGIN {
-  $App::CopyProsodyDB::VERSION = '0.004';
+  $App::CopyProsodyDB::VERSION = '0.005';
 }
 # ABSTRACT: Class of the copy_prosody_db script
 
@@ -97,8 +97,6 @@ sub _build__trg {
 	return Prosody::Storage::SQL->new(%vars);
 }
 
-use Data::Printer;
-
 sub BUILD {
 	my ( $self ) = @_;
 	for ($self->_src->rs->search({})->all) {
@@ -123,7 +121,7 @@ App::CopyProsodyDB - Class of the copy_prosody_db script
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 AUTHOR
 

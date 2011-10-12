@@ -3,7 +3,7 @@ BEGIN {
   $Prosody::Storage::SQL::DB::Result::Prosody::AUTHORITY = 'cpan:GETTY';
 }
 BEGIN {
-  $Prosody::Storage::SQL::DB::Result::Prosody::VERSION = '0.004';
+  $Prosody::Storage::SQL::DB::Result::Prosody::VERSION = '0.005';
 }
 # ABSTRACT: Result class for the prosody table
 
@@ -53,7 +53,7 @@ Prosody::Storage::SQL::DB::Result::Prosody - Result class for the prosody table
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 AUTHOR
 

@@ -45,7 +45,7 @@
          "web" : "http://github.com/Getty/p5-prosody"
       }
    },
-   "version" : "0.004",
+   "version" : "0.005",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
