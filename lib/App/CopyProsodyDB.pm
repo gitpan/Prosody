@@ -2,8 +2,8 @@ package App::CopyProsodyDB;
 BEGIN {
   $App::CopyProsodyDB::AUTHORITY = 'cpan:GETTY';
 }
-BEGIN {
-  $App::CopyProsodyDB::VERSION = '0.005';
+{
+  $App::CopyProsodyDB::VERSION = '0.006';
 }
 # ABSTRACT: Class of the copy_prosody_db script
 
@@ -121,7 +121,7 @@ App::CopyProsodyDB - Class of the copy_prosody_db script
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 AUTHOR
 

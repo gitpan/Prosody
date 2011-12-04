@@ -2,8 +2,8 @@ package Prosody;
 BEGIN {
   $Prosody::AUTHORITY = 'cpan:GETTY';
 }
-BEGIN {
-  $Prosody::VERSION = '0.005';
+{
+  $Prosody::VERSION = '0.006';
 }
 # ABSTRACT: Library for things around the prosody XMPP server
 
@@ -21,7 +21,7 @@ Prosody - Library for things around the prosody XMPP server
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 DESCRIPTION
 
