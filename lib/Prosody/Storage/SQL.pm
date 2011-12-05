@@ -3,7 +3,7 @@ BEGIN {
   $Prosody::Storage::SQL::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Prosody::Storage::SQL::VERSION = '0.006';
+  $Prosody::Storage::SQL::VERSION = '0.007';
 }
 # ABSTRACT: access a database of mod_storage_sql
 
@@ -150,7 +150,7 @@ Prosody::Storage::SQL - access a database of mod_storage_sql
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =head1 AUTHOR
 

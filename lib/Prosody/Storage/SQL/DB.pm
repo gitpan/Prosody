@@ -3,7 +3,7 @@ BEGIN {
   $Prosody::Storage::SQL::DB::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Prosody::Storage::SQL::DB::VERSION = '0.006';
+  $Prosody::Storage::SQL::DB::VERSION = '0.007';
 }
 # ABSTRACT: DBIx::Class::Schema for the prosody database
 
@@ -23,7 +23,7 @@ Prosody::Storage::SQL::DB - DBIx::Class::Schema for the prosody database
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =head1 AUTHOR
 
